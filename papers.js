@@ -382,7 +382,7 @@ function renderKeynote(kn) {
         aria-expanded="false"
         aria-controls="${collapseId}"
       >
-        Abstract
+        Info
       </button>
   
       <!-- Collapsible container -->
