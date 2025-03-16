@@ -257,3 +257,9 @@ header.masthead .intro-text .intro-heading {
     color: #d44 !important;
     text-decoration: none;
 }
+
+#programme ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
