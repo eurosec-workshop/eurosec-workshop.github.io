@@ -371,7 +371,7 @@ function renderKeynote(kn, index) {
   return `
     <tr>
       <td class="orga">
-        <strong>Keynote: ${kn.title}</strong><br>
+        <strong>Keynote: "${kn.title}"</strong><br>
         <em>${kn.speaker}</em><br>
         <button
           class="btn btn-link p-0"
