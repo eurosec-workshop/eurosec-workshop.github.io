@@ -58,21 +58,27 @@ const sessionB = [
       `
     },
     {
-      title: "Site Attestation: Browser-based Remote Attestation",
-      authors: "Luca Preibsch, Maxim Ritter, Rüdiger Kapitza (Friedrich-Alexander-Universität Erlangen-Nürnberg)",
+      title: "Mazu: A Zero Trust Architecture for Service Mesh Control Planes",
+      authors: `
+        Aashutosh Poudel, Pankaj Niroula, Collin MacDonald, 
+        Lily Gloudemans, Stephen Herwig (William & Mary)      
+    `,
       abstract: `
-        When a website is accessed, a connection is made using HTTPS to ensure that it ends 
-        with the website owner and that subsequent data traffic is secured. 
-        However, no further assurances can be given to a user. 
-        It is therefore a matter of trust that the site is secure and treats the information exchanged faithfully. 
-        This puts users at risk of interacting with insecure or even fraudulent systems. With the availability of confidential computing, 
-        which makes execution contexts secure from external access and remotely attestable, this situation can be fundamentally improved.
+        Microservices are a dominant cloud computing architecture because they enable applications 
+        to be built as collections of loosely coupled services. To provide greater observability 
+        and control into the resultant distributed system, microservices often use an overlay proxy 
+        network called a service mesh. A key advantage of service meshes is their ability to implement 
+        zero trust networking by encrypting microservice traffic with mutually authenticated TLS. 
+        However, the service mesh control plane—particularly its local certificate authority—becomes 
+        a critical point of trust. If compromised, an attacker can issue unauthorized certificates 
+        and redirect traffic to impersonating services.
 
-        In this paper, we propose browser-based site attestation that allows users to validate advanced security properties 
-        when accessing a website secured by confidential computing. 
-        This includes data handling policies such as the data provided being processed only during the visit and not stored or forwarded. 
-        Or informs the user that the accessed site has been audited by a security company and that the audited state is still intact. 
-        This is achieved by integrating remote attestation capabilities directly into a commodity browser and enforcing user-managed attestation rules.
+        In this paper, we introduce our initial work in Mazu, a system designed to eliminate trust 
+        in the service mesh control plane by replacing its certificate authority with an unprivileged principal. 
+        Mazu leverages recent advances in registration-based encryption and integrates seamlessly with Istio, 
+        a widely used service mesh. Our preliminary evaluation, using Fortio macro-benchmarks and 
+        Prometheus-assisted micro-benchmarks, shows that Mazu significantly reduces the service mesh’s 
+        attack surface while adding just 0.17 ms to request latency compared to mTLS-enabled Istio.
       `
     },
     {
@@ -230,27 +236,21 @@ const sessionC = [
       `
     },
     {
-      title: "Mazu: A Zero Trust Architecture for Service Mesh Control Planes",
-      authors: `
-        Aashutosh Poudel, Pankaj Niroula, Collin MacDonald, 
-        Lily Gloudemans, Stephen Herwig (William & Mary)      
-    `,
+      title: "Site Attestation: Browser-based Remote Attestation",
+      authors: "Luca Preibsch, Maxim Ritter, Rüdiger Kapitza (Friedrich-Alexander-Universität Erlangen-Nürnberg)",
       abstract: `
-        Microservices are a dominant cloud computing architecture because they enable applications 
-        to be built as collections of loosely coupled services. To provide greater observability 
-        and control into the resultant distributed system, microservices often use an overlay proxy 
-        network called a service mesh. A key advantage of service meshes is their ability to implement 
-        zero trust networking by encrypting microservice traffic with mutually authenticated TLS. 
-        However, the service mesh control plane—particularly its local certificate authority—becomes 
-        a critical point of trust. If compromised, an attacker can issue unauthorized certificates 
-        and redirect traffic to impersonating services.
+        When a website is accessed, a connection is made using HTTPS to ensure that it ends 
+        with the website owner and that subsequent data traffic is secured. 
+        However, no further assurances can be given to a user. 
+        It is therefore a matter of trust that the site is secure and treats the information exchanged faithfully. 
+        This puts users at risk of interacting with insecure or even fraudulent systems. With the availability of confidential computing, 
+        which makes execution contexts secure from external access and remotely attestable, this situation can be fundamentally improved.
 
-        In this paper, we introduce our initial work in Mazu, a system designed to eliminate trust 
-        in the service mesh control plane by replacing its certificate authority with an unprivileged principal. 
-        Mazu leverages recent advances in registration-based encryption and integrates seamlessly with Istio, 
-        a widely used service mesh. Our preliminary evaluation, using Fortio macro-benchmarks and 
-        Prometheus-assisted micro-benchmarks, shows that Mazu significantly reduces the service mesh’s 
-        attack surface while adding just 0.17 ms to request latency compared to mTLS-enabled Istio.
+        In this paper, we propose browser-based site attestation that allows users to validate advanced security properties 
+        when accessing a website secured by confidential computing. 
+        This includes data handling policies such as the data provided being processed only during the visit and not stored or forwarded. 
+        Or informs the user that the accessed site has been audited by a security company and that the audited state is still intact. 
+        This is achieved by integrating remote attestation capabilities directly into a commodity browser and enforcing user-managed attestation rules.
       `
     }
   ];
