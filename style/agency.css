@@ -244,3 +244,16 @@ header.masthead .intro-text .intro-heading {
     }
 }
 
+
+/* Ensure Abstract and Info links match the standard red color */
+.btn-link {
+    color: #b33 !important;
+    text-decoration: none;
+}
+
+.btn-link:hover, 
+.btn-link:focus, 
+.btn-link:active {
+    color: #d44 !important;
+    text-decoration: none;
+}
