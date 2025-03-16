@@ -365,34 +365,33 @@ function insertSessionPapers(papersArray, listId, sessionName) {
     insertSessionPapers(sessionB, "sessionB-papers", "B");
     insertSessionPapers(sessionC, "sessionC-papers", "C");
   });
-  
-function renderKeynote(kn) {
-    const collapseId = `collapse-${kn.id}`; // unique collapse ID
-    return `
-      <b>Keynote Speech</b><br>
-      <b>Speaker:</b> ${kn.speaker}<br>
-      <b>Title:</b> ${kn.title}<br>
-  
-      <!-- The toggle button -->
-      <button
-        class="btn btn-link p-0"
-        type="button"
-        data-toggle="collapse"
-        data-target="#${collapseId}"
-        aria-expanded="false"
-        aria-controls="${collapseId}"
-      >
+
+function renderKeynote(kn, index) {
+  const collapseId = `collapse-keynote-${index}`;
+  return `
+    <tr>
+      <td class="orga">
+        <strong>Keynote: ${kn.title}</strong><br>
+        <em>${kn.speaker}</em><br>
+        <button
+          class="btn btn-link p-0"
+          type="button"
+          data-toggle="collapse"
+          data-target="#${collapseId}"
+          aria-expanded="false"
+          aria-controls="${collapseId}"
+        >
         Info
-      </button>
-  
-      <!-- Collapsible container -->
-      <div class="collapse mt-2" id="${collapseId}">
-        <div class="card card-body">
-          ${kn.abstract}
+        </button>
+        <div class="collapse mt-2" id="${collapseId}">
+          <div class="card card-body">
+            ${kn.abstract}
+          </div>
         </div>
-      </div>
-    `;
-  }
+      </td>
+    </tr>
+  `;
+}
   
 // Insert the keynote data into the table cells
 document.addEventListener("DOMContentLoaded", () => {
