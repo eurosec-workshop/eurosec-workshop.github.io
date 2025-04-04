@@ -7,6 +7,7 @@ const sessionA = [
     {
       title: "Provable Co-Owned Data Deletion with Zero-Residuals and Verifiability in Multi-Cloud Environment",
       authors: "Marwan Adnan Darwish, Evangelia Anna Markatou, Georgios Smaragdakis (TU Delft)",
+      doi: "https://doi.org/10.1145/3722041.3723104", 
       abstract: `
         The rapid expansion of multi-cloud environments and the growing prevalence of collaborative data ownership 
         present significant challenges in ensuring the verifiable deletion of co-owned data. 
@@ -34,6 +35,7 @@ const sessionB = [
     {
       title: "Diagnosing and Neutralizing Address-Sensitive Behavior in Multi-Variant Execution Systems",
       authors: "Anton Schelfhout, Adriaan Jacobs, Jonas Vinck, Stijn Volckaert (DistriNet, KU Leuven)",
+      doi: "https://doi.org/10.1145/3722041.3723094", 
       abstract: `
         Multi-Variant eXecution (MVX) systems are a potent building block for comprehensive memory corruption defenses. 
         They run multiple diversified variants of the same program in parallel, feed them the same inputs, 
@@ -61,8 +63,8 @@ const sessionB = [
       title: "Mazu: A Zero Trust Architecture for Service Mesh Control Planes",
       authors: `
         Aashutosh Poudel, Pankaj Niroula, Collin MacDonald, 
-        Lily Gloudemans, Stephen Herwig (William & Mary)      
-    `,
+        Lily Gloudemans, Stephen Herwig (William & Mary)`,
+      doi: "https://doi.org/10.1145/3722041.3723100", 
       abstract: `
         Microservices are a dominant cloud computing architecture because they enable applications 
         to be built as collections of loosely coupled services. To provide greater observability 
@@ -84,6 +86,7 @@ const sessionB = [
     {
       title: "Can Neural Decompilation Assist Vulnerability Prediction on Binary Code?",
       authors: "Domenico Cotroneo, Francesco Crescenzo Grasso, Roberto Natella, Vittorio Orbinato (University of Naples Federico II)",
+      doi: "https://doi.org/10.1145/3722041.3723097",
       abstract: `
         Vulnerability prediction is valuable in identifying security issues efficiently, 
         even though it requires the source code of the target software system, which is a restrictive hypothesis. 
@@ -98,6 +101,7 @@ const sessionB = [
     {
       title: "CUDA, Woulda, Shoulda: Returning Exploits in a SASS-y World",
       authors: "Jonas Roels, Adriaan Jacobs, Stijn Volckaert (DistriNet, KU Leuven)",
+      doi: "https://doi.org/10.1145/3722041.3723099", 
       abstract: `
         The rising popularity of Graphics Processing Units (GPUs) has made them an attractive target 
         for attackers looking to steal Intellectual Property (IP) such as ML models or disrupt 
@@ -123,6 +127,7 @@ const sessionB = [
     {
       title: "rustc++: Facilitating Advanced Analysis of Rust Code",
       authors: "Antonis Louka (University of Cyprus), Georgios Portokalidis (IMDEA Software Institute), Elias Athanasopoulos (University of Cyprus),",
+      doi: "https://doi.org/10.1145/3722041.3723102", 
       abstract: `
         Rust is a popular programming language with strong memory-safety guarantees, 
         achieved through its ownership and borrowing model. Rust allows a programmer 
@@ -154,6 +159,7 @@ const sessionC = [
     {
       title: "Enhancing IoT Defenses Against Radio Jamming: Insights from a Thread Testbed Case Study",
       authors: "Poonam Yadav, Anthony Moulds, Peter Gillingham (University of York, UK)",
+      doi: "https://doi.org/10.1145/3722041.3723096", 
       abstract: `
         As the Internet of Things (IoT) ecosystem continues to expand, 
         ensuring robust wireless communication in the face of radio jamming 
@@ -174,8 +180,8 @@ const sessionC = [
       authors: `
         Mohamed Hashim Changrampadi (Chalmers University of Technology and University of Gothenburg), 
         Magnus Almgren (Chalmers University of Technology and University of Gothenburg)
-        Pablo Picazo-Sanchez (Halmstad University), Ahmed Ali-Eldin (Chalmers University of Technology and University of Gothenburg)
-      `,
+        Pablo Picazo-Sanchez (Halmstad University), Ahmed Ali-Eldin (Chalmers University of Technology and University of Gothenburg)`,
+      doi: "https://doi.org/10.1145/3722041.3723098", 
       abstract: `
         Transformer-based models have emerged as a powerful solution for network traffic classification,
         achieving high accuracy by autonomously learning patterns in raw traffic data. 
@@ -198,7 +204,8 @@ const sessionC = [
         Soroush Meghdadizanjani (Stony Brook University), 
         Saleh Khalaj Monfared (Worcester Polytechnic Institute), 
         Erik van der Kouwe (Vrije Universiteit Amsterdam), 
-        Asia Slowinska (Vrije Universiteit Amsterdam)                            `,
+        Asia Slowinska (Vrije Universiteit Amsterdam)`,
+      doi: "https://doi.org/10.1145/3722041.3723101",
       abstract: `
         Debugging hardware designs presents unique and significant challenges compared to software debugging. 
         Software simulators often fail to uncover design issues arising from physical constraints or incorrect elaboration.
@@ -222,6 +229,7 @@ const sessionC = [
         Ioannis Katoikos (Dept. of ECE, University of Patras), Christos A. Fidas (Dept. of ECE, University of Patras),
         Dimitrios Koukopoulos (Dept. of History and Archaeology, University of Patras)
       `,
+      doi: "https://doi.org/10.1145/3722041.3723103",
       abstract: `
         The development of reliable authentication schemes is a significant challenge due to vulnerabilities 
         like shoulder-surfing and impersonation attacks. This paper presents a six-month in-lab study (N=30) 
@@ -238,6 +246,7 @@ const sessionC = [
     {
       title: "Site Attestation: Browser-based Remote Attestation",
       authors: "Luca Preibsch, Maxim Ritter, Rüdiger Kapitza (Friedrich-Alexander-Universität Erlangen-Nürnberg)",
+      doi: "https://doi.org/10.1145/3722041.3723095",
       abstract: `
         When a website is accessed, a connection is made using HTTPS to ensure that it ends 
         with the website owner and that subsequent data traffic is secured. 
@@ -257,31 +266,48 @@ const sessionC = [
   
 
 
-  // 2) Function to render a single paper as collapsible HTML
-  function renderPaper(paper, index, sessionName) {
-    const collapseId = `collapse-${sessionName}-${index}`;
-    return `
-      <li>
-        <strong>${paper.title}</strong><br>
-        <em>${paper.authors}</em><br>
-        <button
-          class="btn btn-link p-0"
-          type="button"
-          data-toggle="collapse"
-          data-target="#${collapseId}"
-          aria-expanded="false"
-          aria-controls="${collapseId}"
-        >
-        Abstract
-        </button>
-        <div class="collapse mt-2" id="${collapseId}">
-          <div class="card card-body">
-            ${paper.abstract}
-          </div>
-        </div>
-      </li>
-    `;
+// 2) Function to render a single paper as collapsible HTML
+function renderPaper(paper, index, sessionName) {
+  const collapseId = `collapse-${sessionName}-${index}`;
+
+  // Awards
+  let badges = "";
+  if (paper.title.includes("CUDA, Woulda, Shoulda")) {
+    badges += `<span class="badge badge-success ml-2">Best Paper Award 🏆</span>`;
   }
+  if (paper.title.includes("Mazu: A Zero Trust Architecture")) {
+    badges += `<span class="badge badge-primary ml-2">Best Presentation Award 🎙️</span>`;
+  }
+
+  const doiLink = paper.doi
+    ? `<a href="${paper.doi}" class="btn btn-link p-0 ml-3" target="_blank">doi</a>`
+    : "";
+
+  return `
+    <li>
+      <strong>${paper.title}</strong>${badges}<br>
+      <em>${paper.authors}</em><br>
+      <button
+        class="btn btn-link p-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#${collapseId}"
+        aria-expanded="false"
+        aria-controls="${collapseId}"
+      >
+        Abstract
+      </button>
+      ${doiLink}
+      <div class="collapse mt-2" id="${collapseId}">
+        <div class="card card-body">
+          ${paper.abstract}
+        </div>
+      </div>
+    </li>
+  `;
+}
+    
+  
   
 const keynotes = [
     {
