@@ -280,7 +280,7 @@ function renderPaper(paper, index, sessionName) {
   }
 
   const doiLink = paper.doi
-    ? `<a href="${paper.doi}" class="btn btn-link p-0 ml-3" target="_blank">doi</a>`
+    ? `<a href="${paper.doi}" class="btn btn-link p-0 ml-3" target="_blank">DOI/ACM</a>`
     : "";
 
   return `
