@@ -4,9 +4,6 @@ const bannerImages = [
     'assets/banner2.jpg',
     'assets/banner3.jpg', 
     'assets/banner4.jpg',
-    'assets/banner5.jpg',
-    'assets/banner6.webp',
-    'assets/banner7.jpg',
 ];
 
 // Select the header element
